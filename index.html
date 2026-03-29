@@ -82,12 +82,20 @@
     .hero {
       position: relative;
       min-height: 70vh;
+      width: 100%;
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
       text-align: center; padding: 60px 20px;
-      background: rgba(61,60,57,.82);
-      position: relative;
+      background: #3D3C39;
       color: white;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(61,60,57,0.65);
+      z-index: 1;
     }
     .hero h1 {
       font-family: 'Antonio', sans-serif;
@@ -371,12 +379,12 @@
 
   <div class="hero">
     <iframe
-      src="https://www.youtube.com/embed/LnVEDS1zLM8?autoplay=1&mute=1&loop=1&playlist=LnVEDS1zLM8&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
-      style="position:absolute;top:50%;left:50%;width:180%;height:180%;transform:translate(-50%,-50%);object-fit:cover;z-index:0;opacity:0.55;border:none;pointer-events:none;"
+      src="https://www.youtube.com/embed/LnVEDS1zLM8?autoplay=1&mute=1&loop=1&playlist=LnVEDS1zLM8&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&vq=hd720"
+      style="position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:177.78vh;height:56.25vw;transform:translate(-50%,-50%);z-index:0;border:none;pointer-events:none;"
       allow="autoplay; encrypted-media"
       allowfullscreen>
     </iframe>
-    <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;width:100%;">
+    <div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;width:100%;">
     <h1>Mente de Hierro,<br>Cuerpo de Atleta</h1>
     <p>Psiconeuroinmunología, Fuerza Femenina y Especialista en Lactancia Materna.</p>
     <div class="hero-btns">
